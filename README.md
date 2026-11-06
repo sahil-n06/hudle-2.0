@@ -8,6 +8,8 @@ Book sports venues online. Players find a court, turf or pool, pick a time and b
   <img src="screenshots/mobile-03-slot-selected-sticky.png" alt="Picking a time on mobile" width="210">
 </p>
 
+> 📝 **Reviewer?** Start with [NOTES.md](NOTES.md): what's done, what I fixed and what can be improved.
+
 **Stack:** Next.js 15 + React 19 (`web/`) · Node.js + Express 5 (`api/`) · PostgreSQL
 
 ---
