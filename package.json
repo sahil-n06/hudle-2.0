@@ -1,0 +1,16 @@
+{
+  "name": "playspot",
+  "private": true,
+  "description": "PlaySpot venue booking: one-command setup and dev for the API and website",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "node scripts/dev.mjs",
+    "seed": "npm --prefix api run seed",
+    "db:docker": "docker run -d --name playspot-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:17-alpine",
+    "test": "npm --prefix api test && npm --prefix web test",
+    "lint": "npm --prefix api run lint && npm --prefix web run lint"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

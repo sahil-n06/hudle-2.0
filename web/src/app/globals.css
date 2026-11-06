@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+/*
+  Light, airy "going-out app" look: white surfaces, near-black type and primary buttons,
+  one violet accent for icons, links and focus, and a fresh green for the Play / sports tab.
+  brand-* is the ink scale used by primary buttons and selected states.
+*/
+@theme {
+  --color-brand-50: #f4f4f6;
+  --color-brand-100: #e8e8ec;
+  --color-brand-500: #3d3d45;
+  --color-brand-600: #16161a;
+  --color-brand-700: #000000;
+  --color-brand-900: #16161a;
+
+  --color-accent-50: #f3f0ff;
+  --color-accent-100: #e6defe;
+  --color-accent-500: #7048e8;
+  --color-accent-600: #5f3dc4;
+
+  --color-play-50: #e9f9ef;
+  --color-play-600: #1f9d55;
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+:focus-visible {
+  outline-color: var(--color-accent-500);
+}
+
+/* Hide the scrollbar on horizontal scrollers (date strip, sport tiles) but keep scrolling. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@layer base {
+  :focus-visible {
+    outline: 3px solid #7048e8;
+    outline-offset: 3px;
+  }
+  input,
+  select,
+  textarea {
+    &:focus-visible {
+      outline: none;
+      border-color: #7048e8;
+      box-shadow: 0 0 0 3px #e6defe;
+    }
+  }
+}
